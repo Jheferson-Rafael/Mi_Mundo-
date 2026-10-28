@@ -580,7 +580,7 @@ html.in-prologue #universe>*:not(#prologue){visibility:hidden!important}
       texto:'Si estás leyendo esto, es porque el tiempo pasó… y yo sigo aquí.\n\nSigo eligiéndote, mi monguita, igual que la primera vez, pero ahora con más historias, más abrazos y más razones. Gracias por cada día que no estaba escrito en ninguna estrella y que, aun así, vivimos juntos.\n\nLo que te prometí bajo esta luna sigue en pie.'
     },
     pista:null,                               // texto de una pista hacia un regalo de verdad (null = no aparece)
-    respuesta:{whatsapp:null,correo:null},    // whatsapp en formato internacional sin "+", p. ej. '51999999999'
+    respuesta:{whatsapp:'51989119729',correo:'jhefersonraf09@gmail.com'},    // whatsapp en formato internacional sin "+", p. ej. '51999999999'
     tituloVideo:'Amame…',
     pies:[],                                  // textos opcionales bajo cada foto, en el mismo orden
     sombreroDeBruja:'auto'                    // 'auto' (semana de Halloween), true o false
@@ -2884,7 +2884,7 @@ html.in-prologue #universe>*:not(#prologue){visibility:hidden!important}
       songOk?['r','Música','«Sabes una cosa» ♫']:null,
       ['r','Guion','Todo lo que las palabras no siempre pueden explicar'],
       ['r','Escrita y dirigida por',esc(DORIS.autor)],
-      ['r','Dedicada a','Doris'],
+      ['r','Dedicada a','Doris El Amor de mi vida'],
       ['t','Ningún gato fue molestado durante esta producción; solo fue mimado.']
     ].filter(Boolean);
     const html=rows.map(r=>r[0]==='h'?`<h2 class="cr-h">${r[1]}</h2>`:r[0]==='t'?`<p class="cr-t">${r[1]}</p>`:`<div class="cr-r"><span>${r[1]}</span><b>${r[2]}</b>${r[3]?`<em>${r[3]}</em>`:''}</div>`).join('');
@@ -2899,7 +2899,7 @@ html.in-prologue #universe>*:not(#prologue){visibility:hidden!important}
   // Responder a la Luna ─────────────────────────────────────
   SCENES.reply=body=>{
     const R=DORIS.respuesta||{},num=R.whatsapp?String(R.whatsapp).replace(/\D/g,''):'',mail=R.correo||'';
-    const chips=['Yo también te elijo, siempre ♡','Me hiciste llorar (de felicidad)','Gracias por mi universo ✧'];
+    const chips=['Yo también te elijo, siempre ♡','Me hiciste llorar (de felicidad tengamos 3 hijos)','Gracias por mi universo Tengamos 2 hijos ✧'];
     body.innerHTML=`<div class="rp-wrap"><div class="rp-moon" aria-hidden="true">☾</div><div class="rp-title">Responder a la Luna</div>
       <p class="rp-sub">Cuéntale a la Luna lo que sentiste. Tu mensaje llegará hasta mí.</p>
       <div class="rp-chips">${chips.map(c=>`<button type="button" class="nav-button">${esc(c)}</button>`).join('')}</div>
